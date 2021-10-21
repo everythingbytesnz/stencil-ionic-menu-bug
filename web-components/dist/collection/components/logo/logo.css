@@ -1,0 +1,80 @@
+/*** Common *****/
+/*** End Common *****/
+.logo-primary,
+.logo,
+:host {
+  --svg-lead-color: var(--color-light, #ffffff);
+  color: var(--color-primary, #00467f);
+}
+
+.logo-inverted {
+  --svg-lead-color: var(--color-primary, #00467f);
+  color: var(--color-light, #ffffff);
+}
+
+.logo-dark {
+  --svg-lead-color: var(--color-light, #ffffff);
+  color: var(--color-dark);
+}
+
+.logo-light {
+  --svg-lead-color: var(--color-dark, #000000);
+  color: var(--color-light, #ffffff);
+}
+
+.small.vertical {
+  width: 100px;
+  height: 96px;
+}
+.small.horizontal {
+  width: 181px;
+  height: 60px;
+}
+
+.default.vertical {
+  width: 235px;
+  height: 225px;
+}
+.default.horizontal {
+  width: 285px;
+  height: 93px;
+}
+@media (max-width: 576px) {
+  .default.vertical {
+    width: 100px;
+    height: 96px;
+  }
+  .default.horizontal {
+    width: 181px;
+    height: 60px;
+  }
+}
+
+.large.vertical {
+  width: 339px;
+  height: 325px;
+}
+.large.horizontal {
+  width: 481px;
+  height: 159px;
+}
+@media (min-width: 577px) and (max-width: 991px) {
+  .large.vertical {
+    width: 235px;
+    height: 225px;
+  }
+  .large.horizontal {
+    width: 285px;
+    height: 93px;
+  }
+}
+@media (max-width: 576px) {
+  .large.vertical {
+    width: 100px;
+    height: 96px;
+  }
+  .large.horizontal {
+    width: 181px;
+    height: 60px;
+  }
+}

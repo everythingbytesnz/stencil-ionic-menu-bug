@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Icon/ic_schedule</title>
+    <defs>
+        <path d="M10,0 C15.52,0 20,4.48 20,10 C20,15.52 15.52,20 10,20 C4.47,20 0,15.52 0,10 C0,4.48 4.47,0 10,0 Z M10,2 C5.58,2 2,5.58 2,10 C2,14.42 5.58,18 10,18 C14.42,18 18,14.42 18,10 C18,5.58 14.42,2 10,2 Z M10.5,5 L10.5,10.1639344 L15,12.7901639 L14.25,14 L9,10.9016393 L9,5 L10.5,5 Z" id="path-1"></path>
+    </defs>
+    <g id="Icon/ic_schedule" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g transform="translate(2.000000, 2.000000)">
+            <mask id="mask-2" fill="white">
+                <use xlink:href="#path-1"></use>
+            </mask>
+            <use id="Combined-Shape" fill="#000000" xlink:href="#path-1"></use>
+            <g id="Group" mask="url(#mask-2)">
+                <g transform="translate(-2.000000, -2.000000)" id="Colour/COL009-White-#FFFFFF">
+                    <polygon id="#00467F" fill="#00467F" points="0 0 24 0 24 24 0 24"></polygon>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

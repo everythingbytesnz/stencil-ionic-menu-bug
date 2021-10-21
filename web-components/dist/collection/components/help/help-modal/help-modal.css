@@ -1,0 +1,35 @@
+/*** Common *****/
+/*** End Common *****/
+:host {
+  display: block;
+}
+
+.flex-end {
+  align-items: center;
+  justify-content: flex-end;
+}
+
+ion-modal.helpModal {
+  --height: auto !important;
+  --width: 400px;
+  --min-height: 200px;
+}
+ion-modal.helpModal .modal-wrapper .ion-page {
+  position: relative;
+  contain: content;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+ion-modal.helpModal .modal-wrapper ion-header {
+  position: sticky;
+  top: 0;
+}
+@media (max-width: 576px) {
+  ion-modal.helpModal {
+    --height: 100% !important;
+    --width: 100%;
+  }
+  ion-modal.helpModal .modal-wrapper .ion-page {
+    max-height: 100vh;
+  }
+}

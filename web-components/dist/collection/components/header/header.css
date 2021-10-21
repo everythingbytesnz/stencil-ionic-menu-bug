@@ -1,0 +1,92 @@
+/*** Common *****/
+/*** End Common *****/
+:host {
+  /**
+  * @prop --header-background : Background of header.
+  * @prop --header-text-color : Text color of header.
+  * @prop --margin-bottom: Bottom margin of header.
+  */
+  display: flex;
+  justify-content: space-between;
+  padding: 21px 2vw 16px 2vw;
+  background-color: var(--header-background, var(--color-light-1));
+  color: var(--header-text-color, "inherit");
+  width: 100%;
+}
+:host .logo-wrapper {
+  position: relative;
+}
+
+.flex-same-size {
+  flex: 1 1 0;
+  align-self: flex-end;
+}
+@media (max-width: 576px) {
+  .flex-same-size {
+    align-self: end;
+  }
+}
+
+:host(.horizontal) {
+  margin-bottom: var(--margin-bottom, var(--space-3xl));
+}
+
+:host(.vertical-small) {
+  height: 80px;
+  margin-bottom: var(--margin-bottom, var(--space-5xl));
+}
+
+:host(.vertical-default) {
+  height: 155px;
+  margin-bottom: var(--margin-bottom, 96px);
+}
+@media (max-width: 576px) {
+  :host(.vertical-default) {
+    height: 80px;
+    margin-bottom: var(--margin-bottom, var(--space-5xl));
+  }
+}
+
+:host(.vertical-large) {
+  height: 221px;
+  margin-bottom: var(--margin-bottom, 130px);
+}
+@media (min-width: 577px) and (max-width: 991px) {
+  :host(.vertical-large) {
+    height: 155px;
+    margin-bottom: var(--margin-bottom, 96px);
+  }
+}
+@media (max-width: 576px) {
+  :host(.vertical-large) {
+    height: 80px;
+    margin-bottom: var(--margin-bottom, var(--space-5xl));
+  }
+}
+
+:host(.horizontal-small) {
+  height: 102px;
+}
+
+:host(.horizontal-default) {
+  height: 135px;
+}
+@media (max-width: 576px) {
+  :host(.horizontal-default) {
+    height: 102px;
+  }
+}
+
+:host(.horizontal-large) {
+  height: 201px;
+}
+@media (min-width: 577px) and (max-width: 991px) {
+  :host(.horizontal-large) {
+    height: 135px;
+  }
+}
+@media (max-width: 576px) {
+  :host(.horizontal-large) {
+    height: 102px;
+  }
+}

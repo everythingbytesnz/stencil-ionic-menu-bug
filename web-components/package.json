@@ -1,0 +1,38 @@
+{
+  "name": "@test/web-components",
+  "version": "1.0.0",
+  "description": "Test Web Components Library",
+  "author": "",
+  "keywords": [
+  ],
+  "main": "dist/index.cjs.js",
+  "module": "dist/custom-elements/index.js",
+  "es2015": "dist/esm/index.mjs",
+  "es2017": "dist/esm/index.mjs",
+  "types": "dist/custom-elements/index.d.ts",
+  "collection": "dist/collection/collection-manifest.json",
+  "collection:main": "dist/collection/index.js",
+  "unpkg": "dist/uoa-web-components/uoa-web-components.esm.js",
+  "files": [
+    "dist/",
+    "loader/"
+  ],
+  "scripts": {
+    "build": "stencil build",
+    "start": "stencil build --dev --watch --serve"
+  },
+  "dependencies": {
+    "@ionic/core": "^5.6.0",
+    "@stencil/core": "2.4.0"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@stencil/sass": "^1.4.1"
+  },
+  "standard-version": {
+    "skip": {
+      "commit": true,
+      "tag": true
+    }
+  }
+}

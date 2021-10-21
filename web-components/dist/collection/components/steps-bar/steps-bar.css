@@ -1,0 +1,101 @@
+/*** Common *****/
+/*** End Common *****/
+:host {
+  /**
+  * @prop --steps-background : Background color of done / in progress steps.
+  * @prop --steps-background-hover : Background color of done steps on hover.
+  * @prop --sticky-top: If "none" stepsbar is not sticky. Default value is "0".
+  * @prop --space-top: Stepsbar padding from top.
+  * @prop --icon-font-size: Stepsbar done icon font size.
+  * @prop --button-padding-start: Stepsbar button padding from start.
+  * @prop --button-padding-end: Stepsbar button padding from end.
+
+  */
+  display: block;
+  position: sticky;
+  top: var(--sticky-top, 0px);
+  z-index: 999;
+  padding: var(--space-top, 20px) 0 20px 0;
+  background-color: var(--color-light);
+}
+:host .done {
+  background-color: var(--steps-background, var(--color-secondary));
+  color: var(--color-light);
+  transition: 0.2s ease;
+}
+:host .done:hover {
+  transition: 0.2s ease;
+  background-color: var(--steps-background-hover, var(--color-primary));
+  border-color: var(--steps-background-hover, var(--color-primary));
+}
+
+.button-disabled {
+  background-color: var(--color-light-1);
+  opacity: 0.8;
+}
+
+.flex-space-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.focus-outline button:focus {
+  outline: none;
+}
+
+.step-bar {
+  z-index: 2;
+  border-radius: 0;
+  width: 100%;
+  height: 30px;
+  position: relative;
+  margin: 0 2px 0;
+  float: left;
+  background-color: var(--color-light-1);
+  --padding-start: var(--button-padding-start, 1px);
+  --padding-end: var(--button-padding-end, 1px);
+}
+.step-bar:first-child {
+  margin-left: 0;
+}
+.step-bar:after, .step-bar:before {
+  content: " ";
+  position: absolute;
+  right: -3px;
+  top: 0px;
+  border-top: 15px solid transparent;
+  border-right: none;
+  border-left: 3px solid var(--color-light-1);
+  border-bottom: 15px solid transparent;
+  transition: 0.2s ease;
+}
+.step-bar.done:after {
+  border-left: 3px solid var(--steps-background, var(--color-secondary));
+}
+.step-bar.done:hover:after {
+  border-left: 3px solid var(--steps-background-hover, var(--color-primary));
+  transition: 0.2s ease;
+}
+.step-bar:before {
+  right: auto;
+  left: 0;
+  border-left: 3px solid var(--color-light);
+}
+.step-bar:first-child:before {
+  border: none;
+  margin-left: 0;
+}
+.step-bar:last-child:after {
+  border: 0;
+  margin-right: 0;
+}
+.step-bar span {
+  font-family: "Open Sans", Arial, sans-serif !important;
+  font-weight: 600;
+  font-size: 0.89rem;
+}
+.step-bar ion-icon {
+  font-size: var(--icon-font-size, 1.5rem);
+}
